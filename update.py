@@ -67,7 +67,15 @@ def update_tle():
 if __name__ == '__main__':
     print "Updating ISS TLE from JSC..."
     try:
+        if not url.startswith('http'):
+            raise ValueError('URL does not start with http')
         update_tle()
+    except urllib.error.URLError as e:
+        print('Failed to retrieve TLE data. Error: {}'.format(e) )
+    except ValueError as e:
+        print('Invalid URL. Error: {}'.format(e))
+    except Exception as e:
+        print('An error occurred while updating TLE data. Error: {}'.format(e))
     except:
         exctype, value = sys.exc_info()[:2]
         print "Error:", exctype, value

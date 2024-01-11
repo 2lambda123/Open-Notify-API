@@ -71,7 +71,7 @@ if __name__ == '__main__':
             raise ValueError('URL does not start with http')
         update_tle()
     except urllib.error.URLError as e:
-        print('Failed to retrieve TLE data. Error: {}'.format(e) )
+        logger.error('Failed to retrieve TLE data. Error: {}'.format(e) )
     except ValueError as e:
         print('Invalid URL. Error: {}'.format(e))
     except Exception as e:

@@ -4,6 +4,7 @@ python:
 
 services:
   - redis-server
+  - new-service
 
 install:
   - pip install -r testsuite/requirements.txt

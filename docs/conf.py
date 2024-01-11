@@ -2,7 +2,7 @@
 import sys, os
 sys.path.insert(0, os.path.abspath('..'))
 import app
-from better import better_theme_path
+from sphinx_rtd import better_theme_path
 html_theme_path = [better_theme_path]
 html_theme = 'better'
 
@@ -27,10 +27,10 @@ source_encoding = 'utf-8-sig'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Open Notify API'
-copyright = u'2016, @natronics'
+project = 'Open-Notify-API'
+copyright = '2022, 2lambda123'
 
-version = 0.2
+version = '1.0.0'
 release = 0.2
 
 add_module_names = True
@@ -89,7 +89,7 @@ html_logo = 'open-notify.png'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ['_static', 'custom_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.

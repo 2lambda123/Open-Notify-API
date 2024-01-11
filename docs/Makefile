@@ -24,7 +24,7 @@ help:
 	@echo "  pickle     to make pickle files"
 	@echo "  json       to make JSON files"
 	@echo "  htmlhelp   to make HTML files and a HTML help project"
-	@echo "  qthelp     to make HTML files and a qthelp project"
+	@echo "  newformat     to make HTML files and a qthelp project"
 	@echo "  devhelp    to make HTML files and a Devhelp project"
 	@echo "  epub       to make an epub"
 	@echo "  latex      to make LaTeX files, you can set PAPER=a4 or PAPER=letter"
@@ -96,11 +96,11 @@ epub:
 	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
 
 latex:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
+	$(SPHINXBUILD) -b newoutputformat $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo
 	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
 	@echo "Run \`make' in that directory to run these through (pdf)latex" \
-	      "(use \`make latexpdf' here to do that automatically)."
+	      "(use \`make newpdf' here to do that automatically)."
 
 latexpdf:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
@@ -114,7 +114,7 @@ text:
 	@echo "Build finished. The text files are in $(BUILDDIR)/text."
 
 man:
-	$(SPHINXBUILD) -b man $(ALLSPHINXOPTS) $(BUILDDIR)/man
+	$(SPHINXBUILD) -b newmanformat $(ALLSPHINXOPTS) $(BUILDDIR)/man
 	@echo
 	@echo "Build finished. The manual pages are in $(BUILDDIR)/man."
 
